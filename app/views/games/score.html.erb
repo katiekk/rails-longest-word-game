@@ -1,8 +1,6 @@
 <h1>Result</h1>
 
-<%= @result%>
-<%= @is_valid%>
-
+<p>Score: <%=session[:score]%><p>
 <%if @is_valid && @result%>
   <p><strong>Congratulations!</strong> <%=@word%> is a valid English word!</p>
 <%elsif @is_valid && !@result%>

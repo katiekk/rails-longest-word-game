@@ -1,7 +1,7 @@
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Roboto:wght@100;300;400;700&display=swap');
 
 body{
   font-family: Roboto, sans-serif;
@@ -10,14 +10,56 @@ body{
   h1{
     font-weight: 400;
     font-size: 48px;
+    line-height: 1em;
+    margin-bottom: 20px;
   }
   ul{
     list-style: none;
+    padding-left: 0;
+    padding-bottom: 20px;
+    margin: 0;
     li{
       display: inline;
+      font-family: 'Courier Prime', monospace;
+      font-size: 24px;
+      box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
       background: #3498DC;
       color: white;
-      padding: 16px;
+      padding: 8px 16px;
+      margin-right: 8px;
+    }
+  }
+  p{
+    font-weight: 300;
+  }
+  a{
+    color: #7999CA;
+    text-decoration: none;
+    &:hover{
+      color: #658ABE;
+    }
+  }
+  form{
+    display: flex;
+    input[type=text]{
+      height: 32px;
+      width: 500px;
+      border: 1px solid #D4D4D4;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    input[type=submit]{
+      width: 56px;
+      font-size: 16px;
+      color: #333333;
+      background-color: white;
+      border: 1px solid #D4D4D4;
+      border-left: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      &:hover{
+        opacity: 0.8;
+      }
     }
   }
 }

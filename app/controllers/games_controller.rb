@@ -11,7 +11,7 @@ class GamesController < ApplicationController
     @grid = params[:letters].split(' ')
     @result = parse(@word)['found']
     @is_valid = valid?(@word, @grid)
-
+    session[:score] += @word.length**2 if @result && @is_valid
   end
 
   private
@@ -22,8 +22,6 @@ class GamesController < ApplicationController
   end
 
   def valid?(word, grid)
-    puts word
-    puts grid
     word.chars.select { |char| word.chars.count(char) > grid.count(char.upcase) }.empty?
   end
 end
